@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 function Cell({ date, isSelected, handleCellClick, isToday }) {
   let cellStyle = "rci_cell";
@@ -17,5 +18,12 @@ function Cell({ date, isSelected, handleCellClick, isToday }) {
     </div>
   );
 }
+
+Cell.propTypes = {
+  date: PropTypes.number,
+  isSelected: PropTypes.bool,
+  handleCellClick: PropTypes.func,
+  isToday: PropTypes.bool,
+};
 
 export default Cell;
