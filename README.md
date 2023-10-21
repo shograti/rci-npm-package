@@ -8,7 +8,7 @@ Install the component via npm.
 npm install rci-datepicker
 ```
 
-Import the component in your projet
+Import the component in your project
 
 ```jsx
 import DatePicker from "rci-date-picker";
