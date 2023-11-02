@@ -1,5 +1,9 @@
 # rci-datepicker
 
+## Minimal requirements
+
+**This library requires node.js >= 13.2.0 and React >= 16.8.0**
+
 ## Get started
 
 Install the component via npm.
