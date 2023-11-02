@@ -13,6 +13,8 @@ function Calendar({
   const [currentMonth, setCurrentMonth] = useState(today.getMonth());
   const [currentYear, setCurrentYear] = useState(today.getFullYear());
 
+  // 42 cells to have enough room for all months
+
   const cells = Array.from({ length: 42 });
 
   const days = ["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"];
@@ -32,9 +34,15 @@ function Calendar({
     "Décembre",
   ];
 
+  // Retrieve the name of the first day of the month
+
   const firstDayOfWeek = new Date(currentYear, currentMonth, 1).getDay();
 
+  // Set the index for the beggining of the week, if the first day of the month is a Sunday, we want to display it at the end of the week
+
   const firstDayIndex = firstDayOfWeek === 0 ? 6 : firstDayOfWeek - 1;
+
+  // Retrieve the number of days in the month by creating a new date object for the first day of the next month and substracting 1 day
 
   const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
 
